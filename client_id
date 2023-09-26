@@ -7,7 +7,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-QHP7BCQ8YG',{
-   'cookie_prefix': 'MyCookie'
+   'cookie_prefix': 'ynagarocustomcid'
 });
 </script>
 </html>
