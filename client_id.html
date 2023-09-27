@@ -18,6 +18,7 @@
       var matchPos = cookies.indexOf(keystr);
 
       var cookieValue = "";
+      var revCookieValue ="";
 
       if (matchPos != -1) {
         var valueStart = matchPos + keystr.length
@@ -28,6 +29,7 @@
           cookieValue = cookies.substring(valueStart);
         }
         cookieValue = unescape(cookieValue);
+        revCookieValue = cookieValue.substring(cookieValue.indexOf("GA1.1.") + 1);
 
       }
       document.getElementById("msg").innerHTML = "ynagarocustomcid_ga: " + cookieValue;
