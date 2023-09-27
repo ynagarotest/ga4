@@ -12,19 +12,19 @@
 </script>
 
 <script>
-const cookies = document.cookie;
-const array = cookies.split(';');
+function getCookieValue(key: string): string {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+        var cookiesArray = cookie.split('='); 
+        if (cookiesArray[0].trim() == key.trim()) { 
+            return cookiesArray[1];  // (key[0],value[1])
+        }
+    }
+    return '';
+};
 
-array.forEach(function(value) {
-  const content = value.split('=');
-  console.log(content); // valueを取得
-})
-/*
-value
-value
-value
-.....
-*/
+console.log(getCookieValue('ynagarocustomcid_ga'));
+  
   
 </script>
 </html>
