@@ -29,7 +29,7 @@
           cookieValue = cookies.substring(valueStart);
         }
         cookieValue = unescape(cookieValue);
-        revCookieValue = cookieValue.substring(cookieValue.indexOf("GA1.1.") + 1);
+        revCookieValue = cookieValue.substr(cookieValue.indexOf("GA1.1.") + 1);
 
       }
       document.getElementById("msg").innerHTML = "ynagarocustomcid_ga: " + revCookieValue;
