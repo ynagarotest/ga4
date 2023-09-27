@@ -10,4 +10,21 @@
    'cookie_prefix': 'ynagarocustomcid'
 });
 </script>
+
+<script>
+const cookies = document.cookie;
+const array = cookies.split(';');
+
+array.forEach(function(value) {
+  const content = value.split('=');
+  console.log(content); // valueを取得
+})
+/*
+value
+value
+value
+.....
+*/
+  
+</script>
 </html>
